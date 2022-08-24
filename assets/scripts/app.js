@@ -2,8 +2,14 @@ const defaultResult = 0;
 
 let currentResult = defaultResult;
 
-currentResult = ((currentResult + 10) * 3) / 2 - 1;
+function add() {
+  currentResult += userInput.value;
 
-let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
-let errorMessage = "An error\noccured";
-outputResult(currentResult, calculationDescription);
+  outputResult(currentResult, "");
+}
+
+addBtn.addEventListened("click", add);
+
+// currentResult = ((currentResult + 10) * 3) / 2 - 1;
+// let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
+// let errorMessage = "An error\noccured";
